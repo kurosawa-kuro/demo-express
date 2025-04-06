@@ -2,7 +2,7 @@
 CLUSTER_NAME := kind
 ECR_REGISTRY := 503561449641.dkr.ecr.ap-northeast-1.amazonaws.com
 IMAGE_NAME := demo-express
-ECR_IMAGE := $(ECR_REGISTRY)/$(IMAGE_NAME):latest
+ECR_IMAGE := 503561449641.dkr.ecr.ap-northeast-1.amazonaws.com/k8s-api-sample:latest
 AWS_REGION := ap-northeast-1
 
 # === Express アプリ ===
