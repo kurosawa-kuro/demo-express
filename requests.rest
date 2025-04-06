@@ -1,0 +1,49 @@
+### 🔄 ヘルスチェック
+GET http://localhost/healthz
+Accept: text/plain
+
+### 📝 投稿一覧取得
+GET http://localhost/posts
+Accept: application/json
+
+### ✏️ 新規投稿作成
+POST http://localhost/posts
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "テスト投稿",
+  "content": "これはテスト用の投稿です"
+}
+
+### 🌍 環境変数表示
+GET http://localhost/env
+Accept: application/json
+
+### ⚙️ ConfigMap確認
+GET http://localhost/config
+Accept: application/json
+
+### 🔑 Secret確認
+GET http://localhost/secret
+Accept: application/json
+
+### ⚠️ エラーテスト
+GET http://localhost/error-test
+Accept: application/json
+
+### 🔥 CPU負荷試験（3秒）
+GET http://localhost/load-test?duration=3000
+Accept: application/json
+
+### 🔥 CPU負荷試験（10秒）
+GET http://localhost/load-test?duration=10000
+Accept: application/json
+
+### 💾 メモリ負荷試験（100MB, 3秒）
+GET http://localhost/load-test/memory?size=100&duration=3000
+Accept: application/json
+
+### 💾 メモリ負荷試験（500MB, 5秒）
+GET http://localhost/load-test/memory?size=500&duration=5000
+Accept: application/json 
